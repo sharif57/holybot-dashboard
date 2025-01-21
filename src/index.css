@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  border: none;
+  font-family: "Lora", serif;
+}
+
+
+/* phone Input  */
+.PhoneInputInput {
+  outline: none;
+  /* background-color: #EFFAFF; */
+  padding: 12px 12px;
+  color: #222222;
+  border-radius: 8px;
+  border: 1px solid #888787;
+  margin-left: 2px;
+}
+
+.PhoneInputInput:focus {
+  border: 1px solid black;
+}
+
+.PhoneInputInput:hover {
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+.PhoneInputCountry {
+  margin-right: 15px !important;
+  display: flex !important;
+  gap: 15px;
+  /* background-color: #EFFAFF; */
+  padding: 14px 14px 14px 18px;
+  border-radius: 8px;
+  border: 1px solid #888787;
+}
+
+.PhoneInputCountry:focus {
+  border: 1px solid black;
+}
+
+.PhoneInputCountry:hover {
+  border: 1px solid black;
+  transition: all 0.3s;
+}
+
+/* responsive sidebar styles */
+/* .ant-menu {
+  background-color: none;
+} */
+
+/* #message-uesrs {
+  scrollbar-width: thin;
+} */
+#message-uesrs::-webkit-scrollbar {
+  width: 4px;
+  /* Width of the scrollbar */
+}
+
+
+/* Chrome, Edge, and Safari */
+
+
+#message-uesrs::-webkit-scrollbar-track {
+  background: transparent;
+  /* Background of the track */
+}
+
+#message-uesrs::-webkit-scrollbar-thumb {
+  background: #61D0FF;
+  /* Color of the scrollbar thumb */
+  border-radius: 20px;
+  /* Rounded corners */
+}
+
+#message-uesrs::-webkit-scrollbar-thumb:hover {
+  background: #61D0FF;
+  /* Darker thumb when hovered */
+}
+
+/* recent-users-table header backgroundColor */
+.recent-users-table .ant-table-thead>tr>th {
+  background: #dd800c;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+.recent-users-table .ant-table-tbody>.ant-table-row>.ant-table-cell {
+  text-align: center;
+  border-bottom: 1px solid #b9b5b5;
+}
+
+.ant-input:focus {
+  border-color: black;
+  outline: 0;
+
+}
+
+.ant-input {
+  border-color: #888787;
+}
+
+.ant-input:hover {
+  border-color: black;
+}
+
+.ant-input::placeholder {
+  color: gray;
+}
+
+/* React Quill */
+/* Parent Container */
+.ql-toolbar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quill Toolbar Styling */
+.ql-toolbar.ql-snow {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #888787;
+  padding: 5px;
+  width: 35%;
+  /* margin: 0 auto;  */
+  box-sizing: border-box;
+  border-radius: 8px;
+  /* Ensure padding is included in width calculation */
+}
+
+/* Separate Toolbar Groups with Borders */
+.ql-toolbar.ql-snow .ql-formats {
+  border-right: 1px solid #474747;
+  padding-right: 8px;
+  margin-right: 8px;
+}
+
+.ql-toolbar.ql-snow .ql-formats:last-child {
+  border-right: none;
+  /* Remove border for the last group */
+}
+
+/* Quill Editor Wrapper */
+.ql-container.ql-snow {
+  border: none !important;
+  /* Ensure the toolbar and editor appear as a single unit */
+}
+
+.ql-toolbar .ql-picker.ql-size {
+  width: auto;
+  /* Ensure the dropdown can expand */
+}
+
+.ql-toolbar .ql-picker-options {
+  max-height: 200px;
+  /* Prevent overflowing */
+  overflow-y: auto;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="14px"]::before {
+  content: '14';
+  font-size: 14px !important;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="16px"]::before {
+  content: '16';
+  /* font-size: 16px !important; */
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="18px"]::before {
+  content: '18';
+  /* font-size: 18px !important; */
+}
+
+/* Custom label for the selected value */
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="14px"]::before {
+  content: "14";
+  font-size: 14px !important;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="16px"]::before {
+  content: "16";
+  /* font-size: 16px !important; */
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="18px"]::before {
+  content: "18";
+  /* font-size: 18px !important; */
+}
+
+/* font size dropdown width reducing */
+.ql-snow .ql-picker.ql-size .ql-picker-label {
+  width: 50px;
+}
+
+.ql-snow .ql-picker.ql-size {
+  width: 50px !important;
+}
+
+
+/* Change the color picker icon to "T" and a circle */
+.ql-snow .ql-picker.ql-color .ql-picker-label {
+  display: flex;
+  /* Flex layout for inline arrangement */
+  align-items: center;
+  /* Center-align "T" and the circle */
+  gap: 5px;
+  /* Space between "T" and the circle */
+  margin-left: -13px;
+}
+
+/* Override the default label of the color picker */
+.ql-snow .ql-picker.ql-color .ql-picker-label::before {
+  content: "T";
+  /* Change "A" to "T" */
+  font-weight: bold;
+  font-size: 13px;
+  /* margin-right: 5px; */
+  color: inherit;
+  /* Reflect the selected text color */
+}
+
+/* Add a circle beside "T" that changes color dynamically */
+.ql-snow .ql-picker.ql-color .ql-picker-label::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  /* margin-left: 5px; */
+  border-radius: 50%;
+  /* Makes it a circle */
+  background-color: currentColor;
+  /* Matches the selected color */
+  border: 1px solid #000;
+  /* Optional border for visibility */
+}
+
+/* Customize color picker dropdown items as circles */
+.ql-snow .ql-picker.ql-color .ql-picker-item {
+  display: inline-block;
+  margin: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--ql-color);
+  border: 1px solid #ccc;
+}
+
+/* Highlight the selected item */
+.ql-snow .ql-picker.ql-color .ql-picker-item.ql-selected,
+.ql-snow .ql-picker.ql-color .ql-picker-item:hover {
+  border-color: #000;
+}
+
+/* Hide default "A" and ensure only custom styling is applied */
+.ql-snow .ql-picker.ql-color .ql-picker-label svg {
+  display: none;
+  /* Hides the "A" SVG */
+}
+
+/* Style the alignment buttons */
+#toolbar .ql-align {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+#toolbar .ql-align:hover {
+  background-color: #e2e2e2;
+}
+
+#toolbar .ql-align:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+/* Quill placeholder text */
+/* .quill>.ql-container>.ql-editor.ql-blank::before {
+  font-size: 16px;
+  font-style: normal;
+  margin-top: 10px;
+} */
+
+.custom-quill-editor {
+  /* min-height: 220px; */
+  /* You can set a minimum height */
+  max-height: none;
+  /* Allow the editor to grow */
+  overflow-y: auto;
+  /* Enable vertical scrolling if necessary */
+}
