@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.1",
     "@tabler/icons-react": "^3.11.0",
     "antd": "^5.20.0",
     "clsx": "^2.1.1",
@@ -24,6 +25,7 @@
     "react-phone-number-input": "^3.4.10",
     "react-quill": "^2.0.0",
     "react-rating": "^2.0.5",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^6.26.0",
     "react-slick": "^0.30.2",
     "react-world-flags": "^1.6.0",
